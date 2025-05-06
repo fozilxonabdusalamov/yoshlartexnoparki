@@ -1,0 +1,111 @@
+.group_card {
+  min-width: 300px;
+  max-width: 300px;
+  height: 400px;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--orgBlack);
+  transition: transform 0.5s ease;
+  cursor: pointer;
+}
+
+.profile_image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+/* Ism va pozitsiya - doimiy ko‘rinadigan */
+.name_position {
+  position: absolute;
+  top: -70px;
+  left: 20px;
+  color: white;
+  z-index: 3;
+  transition: transform 0.5s ease;
+}
+
+.group_card:hover .name_position {
+  transform: translateY(
+    80px
+  ); /* Bu orqali sekinroq yuqoriga siljitish mumkin */
+}
+
+/* Ism va pozitsiya o‘lchamlarini sozlash */
+.name_position h2 {
+  font-size: var(calc(--textDefault + 5px));
+  margin: 0;
+}
+
+.name_position p {
+  margin: 4px 0 0;
+  font-size: var(calc(--textDefault - 5px));
+  color: var(--orgColor);
+}
+
+/* Hover bo‘lganda ko‘rinadigan overlay */
+.social_links {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  color: var(--orgColor);
+  padding: 20px;
+  box-sizing: border-box;
+  gap: 20px;
+  padding-top: 80px;
+  transition: bottom 0.5s ease;
+
+  /* Box-shadow qo‘shish */
+  box-shadow: 0 0px 100px 100px rgba(0, 0, 0, 0.443); /* Yuqori 30% qismga qoraroq shadow */
+}
+
+.group_card:hover .social_links {
+  bottom: 0;
+}
+
+/* Tavsif bo‘limi */
+.description {
+  font-size: var(calc(--textDefault - 5px));
+  line-height: 1.5;
+  height: 270px;
+}
+
+/* Social links */
+.links {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.links a {
+  color: white;
+  font-size: 35px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.links a:nth-child(1):hover {
+  color: rgb(243, 183, 6);
+}
+
+.links a:nth-child(2):hover {
+  color: rgb(8, 98, 246);
+}
+
+.links a:nth-child(3):hover {
+  color: rgb(228, 50, 14);
+}
+
+.links a:nth-child(4):hover {
+  color: rgb(0, 0, 0);
+}
+
+.links a:nth-child(5):hover {
+  color: rgb(36, 158, 218);
+}

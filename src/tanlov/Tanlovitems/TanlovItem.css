@@ -1,0 +1,41 @@
+.tanlov_card {
+  width: 30%;
+  height: 300px;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+
+.tanlov_card > .sarlavha {
+  font-size: 25px;
+  height: 60px;
+  color: var(--mainColor);
+}
+
+.tanlov_card > p {
+  font-size: 16px;
+}
+
+.tanlov_card > p > b {
+  font-size: 20px;
+  color: var(--mainColor);
+}
+
+.tanlov_card > ul {
+  margin-top: -20px;
+}
+
+@media (max-width: 1060px) {
+  .tanlov_card {
+    min-width: 48%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 780px) {
+  .tanlov_card {
+    min-width: 100%;
+    height: auto;
+    padding: 30px 0;
+  }
+}

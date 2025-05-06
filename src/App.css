@@ -1,0 +1,10 @@
+.app {
+  max-width: 1366px; /* width o‘rniga max-width */
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+}
+
+._app {
+  width: 100%;
+}
